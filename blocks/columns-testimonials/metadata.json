@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-testimonials",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-02-15T20:06:56.574Z",
+  "sourceContext": {
+    "originUrl": "https://www.gigamon.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "spacious",
+    "purpose": "testimonials",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "logo + quote + CTA | logo + quote + CTA",
+    "buttonCount": 2,
+    "imageCount": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "side-by-side testimonials",
+      "dual quote sections"
+    ],
+    "notSuitableFor": [
+      "single testimonials",
+      "product sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/content/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-02-15T20:06:56.574Z"
+  }
+}

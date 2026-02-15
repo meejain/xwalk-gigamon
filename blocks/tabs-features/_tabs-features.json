@@ -1,0 +1,64 @@
+{
+  "definitions": [
+    {
+      "title": "Tabs Features",
+      "id": "tabs-features",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Tabs Features",
+              "filter": "tabs-features"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Tabs Features Item",
+      "id": "tabs-features-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Tab",
+              "model": "tabs-features-item",
+              "title": "Tab Name"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "tabs-features-item",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "title",
+          "value": "",
+          "label": "Tab Title"
+        },
+        {
+          "component": "richtext",
+          "name": "content_richtext",
+          "value": "",
+          "label": "Content",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "tabs-features",
+      "components": [
+        "tabs-features-item"
+      ]
+    }
+  ]
+}

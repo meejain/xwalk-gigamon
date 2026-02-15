@@ -1,4 +1,9 @@
 {
   "type": "xwalk",
-  "contentHostUrl": "author-p184156-e1934423.adobeaemcloud.com"
+  "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
+  "contentHostUrl": "author-p184156-e1934423.adobeaemcloud.com",
+  "aemSitePath": "/content/gigamon",
+  "aemAssetsFolderPath": "/content/dam/gigamon",
+  "aemSiteName": "gigamon",
+  "aemSiteTitle": "gigamon xwalk"
 }
