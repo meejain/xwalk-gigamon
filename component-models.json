@@ -327,21 +327,35 @@
     ]
   },
   {
-    "id": "columns-logos",
+    "id": "columns-logos-item",
     "fields": [
       {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo1",
+        "label": "Logo 1",
+        "multi": false
       },
       {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo2",
+        "label": "Logo 2",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo3",
+        "label": "Logo 3",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo4",
+        "label": "Logo 4",
+        "multi": false
       }
     ]
   },
