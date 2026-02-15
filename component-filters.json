@@ -108,16 +108,7 @@
   {
     "id": "columns-logos",
     "components": [
-      "column"
-    ]
-  },
-  {
-    "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
+      "columns-logos-item"
     ]
   },
   {
