@@ -14,7 +14,7 @@
       "cards-resources",
       "carousel",
       "carousel-hero",
-      "columns-logos",
+      "logo-marquee",
       "columns",
       "lottie-animation",
       "columns-award",
@@ -106,12 +106,6 @@
     ]
   },
   {
-    "id": "columns-logos",
-    "components": [
-      "columns-logos-item"
-    ]
-  },
-  {
     "id": "columns-testimonials",
     "components": [
       "column"
@@ -154,6 +148,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "logo-marquee",
+    "components": [
+      "logo-marquee-item"
     ]
   },
   {
