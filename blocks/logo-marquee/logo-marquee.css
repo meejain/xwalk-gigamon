@@ -1,5 +1,5 @@
-/* columns-logos section layout: text left, carousel right */
-.columns-logos-container {
+/* logo-marquee section layout: text left, carousel right */
+.logo-marquee-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,12 +7,12 @@
   margin: 0 auto;
 }
 
-.columns-logos-container .default-content-wrapper {
+.logo-marquee-container .default-content-wrapper {
   text-align: center;
   margin-bottom: 8px;
 }
 
-.columns-logos-container .default-content-wrapper p {
+.logo-marquee-container .default-content-wrapper p {
   color: rgb(255 255 255 / 60%);
   font-size: 14px;
   font-weight: 400;
@@ -20,20 +20,20 @@
   line-height: 1.4;
 }
 
-/* columns-logos block */
-.columns-logos-wrapper {
+/* logo-marquee block */
+.logo-marquee-wrapper {
   width: 100%;
   padding: 0;
 }
 
-.columns-logos {
+.logo-marquee {
   overflow: hidden;
   position: relative;
   padding: 12px 0;
 }
 
-.columns-logos::before,
-.columns-logos::after {
+.logo-marquee::before,
+.logo-marquee::after {
   content: '';
   position: absolute;
   top: 0;
@@ -43,17 +43,17 @@
   pointer-events: none;
 }
 
-.columns-logos::before {
+.logo-marquee::before {
   left: 0;
   background: linear-gradient(to right, #323c3f 0%, transparent 100%);
 }
 
-.columns-logos::after {
+.logo-marquee::after {
   right: 0;
   background: linear-gradient(to left, #323c3f 0%, transparent 100%);
 }
 
-.columns-logos-track {
+.logo-marquee-track {
   display: flex;
   align-items: center;
   gap: 60px;
@@ -61,18 +61,18 @@
   width: max-content;
 }
 
-.columns-logos-item {
+.logo-marquee-item {
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.columns-logos-item picture {
+.logo-marquee-item picture {
   display: block;
 }
 
-.columns-logos-item img {
+.logo-marquee-item img {
   height: 36px;
   width: auto;
   max-width: 130px;
@@ -82,7 +82,7 @@
   transition: opacity 0.3s ease;
 }
 
-.columns-logos-item:hover img {
+.logo-marquee-item:hover img {
   opacity: 1;
 }
 
@@ -98,13 +98,13 @@
 
 /* Desktop: text on left, carousel on right */
 @media (width >= 900px) {
-  .columns-logos-container {
+  .logo-marquee-container {
     flex-direction: row;
     align-items: center;
     gap: 0;
   }
 
-  .columns-logos-container .default-content-wrapper {
+  .logo-marquee-container .default-content-wrapper {
     flex-shrink: 0;
     width: 200px;
     text-align: left;
@@ -112,22 +112,22 @@
     padding-right: 24px;
   }
 
-  .columns-logos-container .default-content-wrapper p {
+  .logo-marquee-container .default-content-wrapper p {
     font-size: 16px;
     line-height: 1.5;
   }
 
-  .columns-logos-wrapper {
+  .logo-marquee-wrapper {
     flex: 1;
     min-width: 0;
   }
 
-  .columns-logos-item img {
+  .logo-marquee-item img {
     height: 70px;
     max-width: 160px;
   }
 
-  .columns-logos-track {
+  .logo-marquee-track {
     gap: 80px;
   }
 }

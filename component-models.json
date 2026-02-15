@@ -327,39 +327,6 @@
     ]
   },
   {
-    "id": "columns-logos-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "logo1",
-        "label": "Logo 1",
-        "multi": false
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "logo2",
-        "label": "Logo 2",
-        "multi": false
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "logo3",
-        "label": "Logo 3",
-        "multi": false
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "logo4",
-        "label": "Logo 4",
-        "multi": false
-      }
-    ]
-  },
-  {
     "id": "columns-testimonials",
     "fields": [
       {
@@ -527,6 +494,39 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "logo-marquee-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo1",
+        "label": "Logo 1",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo2",
+        "label": "Logo 2",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo3",
+        "label": "Logo 3",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo4",
+        "label": "Logo 4",
+        "multi": false
       }
     ]
   },

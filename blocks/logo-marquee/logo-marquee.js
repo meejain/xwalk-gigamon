@@ -1,7 +1,7 @@
 export default function decorate(block) {
   // Create marquee container
   const marqueeTrack = document.createElement('div');
-  marqueeTrack.className = 'columns-logos-track';
+  marqueeTrack.className = 'logo-marquee-track';
 
   // Collect all logos from all rows
   const logos = [];
@@ -12,7 +12,7 @@ export default function decorate(block) {
       const media = pic || img;
       if (media && !(img && img.src.includes('about:error'))) {
         const logoItem = document.createElement('div');
-        logoItem.className = 'columns-logos-item';
+        logoItem.className = 'logo-marquee-item';
         logoItem.appendChild(media.cloneNode(true));
         logos.push(logoItem);
       }

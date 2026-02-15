@@ -1,6 +1,6 @@
 {
-  "variantName": "columns-logos",
-  "baseBlock": "columns",
+  "variantName": "logo-marquee",
+  "baseBlock": "logo-marquee",
   "version": "1.0.0",
   "created": "2026-02-04T21:44:00.000Z",
   "sourceContext": {
