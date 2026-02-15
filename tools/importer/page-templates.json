@@ -1,0 +1,12 @@
+{
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.gigamon.com/"
+      ],
+      "description": "Gigamon corporate homepage with hero, product highlights, and promotional content",
+      "blocks": []
+    }
+  ]
+}
