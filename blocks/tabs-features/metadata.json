@@ -1,0 +1,39 @@
+{
+  "variantName": "tabs-features",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-02-15T20:06:56.574Z",
+  "sourceContext": {
+    "originUrl": "https://www.gigamon.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "feature-showcase",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "tab-name + heading + paragraph + CTA per tab",
+    "buttonCount": 3,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "feature showcase tabs",
+      "product capability tabs"
+    ],
+    "notSuitableFor": [
+      "FAQ content",
+      "simple text tabs"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/content/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-02-15T20:06:56.574Z"
+  }
+}

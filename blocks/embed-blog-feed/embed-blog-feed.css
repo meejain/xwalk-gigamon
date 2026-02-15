@@ -1,0 +1,11 @@
+.embed-blog-feed {
+  width: unset;
+  text-align: center;
+  max-width: 800px;
+  margin: 32px auto;
+}
+
+.embed-blog-feed > div {
+  display: flex;
+  justify-content: center;
+}

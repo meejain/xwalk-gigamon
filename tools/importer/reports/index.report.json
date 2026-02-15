@@ -1,0 +1,33 @@
+{
+  "status": "success",
+  "url": "https://www.gigamon.com/",
+  "path": "index",
+  "timestamp": "2026-02-15T20:33:33.864Z",
+  "title": "Network-Derived Telemetry for Hybrid Cloud Security | Gigamon",
+  "template": "homepage",
+  "blocks": [
+    "carousel-hero",
+    "carousel-logos",
+    "carousel-logos",
+    "carousel-logos",
+    "carousel-logos",
+    "carousel-logos",
+    "carousel-logos",
+    "carousel-logos",
+    "carousel-logos",
+    "carousel-logos",
+    "carousel-logos",
+    "carousel-logos",
+    "carousel-logos",
+    "carousel-logos",
+    "columns-value-prop",
+    "columns-value-prop",
+    "tabs-features",
+    "columns-case-study",
+    "columns-testimonials",
+    "columns-award",
+    "cards-resources",
+    "hero-cta",
+    "embed-blog-feed"
+  ]
+}

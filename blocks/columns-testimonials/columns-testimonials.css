@@ -1,0 +1,33 @@
+.columns-testimonials > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.columns-testimonials img {
+  width: 100%;
+}
+
+.columns-testimonials > div > div {
+  order: 1;
+}
+
+.columns-testimonials > div > .columns-testimonials-img-col {
+  order: 0;
+}
+
+.columns-testimonials > div > .columns-testimonials-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .columns-testimonials > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .columns-testimonials > div > div {
+    flex: 1;
+    order: unset;
+  }
+}

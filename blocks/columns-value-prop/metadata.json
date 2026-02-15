@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-value-prop",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-02-15T20:06:56.574Z",
+  "sourceContext": {
+    "originUrl": "https://www.gigamon.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "value-proposition",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + paragraph + CTA | diagram",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "value proposition sections",
+      "text + diagram layouts"
+    ],
+    "notSuitableFor": [
+      "testimonial layouts",
+      "card grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/content/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-02-15T20:06:56.574Z"
+  }
+}

@@ -11,17 +11,28 @@
       "accordion",
       "button",
       "cards",
+      "cards-resources",
       "carousel",
+      "carousel-hero",
+      "columns-logos",
       "columns",
+      "lottie-animation",
+      "columns-award",
+      "cards-featured",
+      "columns-testimonials",
+      "columns-value-prop",
       "embed",
+      "embed-blog-feed",
       "feature",
       "fragment",
       "form",
       "hero",
+      "hero-cta",
       "image",
       "quote",
       "search",
       "tabs",
+      "tabs-spotlight",
       "table",
       "text",
       "title",
@@ -35,15 +46,108 @@
     ]
   },
   {
+    "id": "cards-featured",
+    "components": [
+      "cards-featured-item"
+    ]
+  },
+  {
+    "id": "cards-resources",
+    "components": [
+      "card"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
     ]
   },
   {
+    "id": "carousel-hero",
+    "components": [
+      "carousel-hero-item"
+    ]
+  },
+  {
     "id": "carousel",
     "components": [
       "carousel-item"
+    ]
+  },
+  {
+    "id": "columns-award",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
+    "id": "columns-case-study",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
+    "id": "columns-logos",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
+    "id": "columns-testimonials",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
+    "id": "columns-value-prop",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
     ]
   },
   {
@@ -83,6 +187,18 @@
     "id": "table-4-columns",
     "components": [
       "table-col-4"
+    ]
+  },
+  {
+    "id": "tabs-features",
+    "components": [
+      "tabs-features-item"
+    ]
+  },
+  {
+    "id": "tabs-spotlight",
+    "components": [
+      "tabs-spotlight-item"
     ]
   },
   {
