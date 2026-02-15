@@ -14,7 +14,7 @@
           ]
         },
         {
-          "name": "columns-logos",
+          "name": "logo-marquee",
           "instances": [
             "div.experiencefragment > div.xf-content-height div.component-background.medium-gray-5-bg section.component-responsive-layout"
           ]
@@ -85,7 +85,7 @@
           "selector": "div.experiencefragment:first-of-type",
           "style": "grey",
           "blocks": [
-            "columns-logos"
+            "logo-marquee"
           ],
           "defaultContent": [
             "p.tiletext"
