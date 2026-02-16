@@ -27,6 +27,10 @@ export default function decorate(block) {
   block.innerHTML = '';
   block.appendChild(marqueeTrack);
 
+  // Ensure parent section has layout class (UE may not auto-add -container)
+  const section = block.closest('.section');
+  if (section) section.classList.add('logo-marquee-container');
+
   // Pause on hover
   block.addEventListener('mouseenter', () => {
     marqueeTrack.style.animationPlayState = 'paused';
