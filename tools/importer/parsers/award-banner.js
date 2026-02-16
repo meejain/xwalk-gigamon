@@ -1,6 +1,6 @@
 /* eslint-disable */
 /* global WebImporter */
-/** Parser: columns-award. Base: columns. Source: gigamon.com */
+/** Parser: award-banner. Base: columns. Source: gigamon.com */
 export default function parse(element, { document }) {
   // Award section has two columns within a responsive-layout:
   // Left col (col-lg-6): F&S logo, heading, description, CTA
@@ -28,6 +28,6 @@ export default function parse(element, { document }) {
   }
 
   const cells = [[col1, col2]];
-  const block = WebImporter.Blocks.createBlock(document, { name: 'columns-award', cells });
+  const block = WebImporter.Blocks.createBlock(document, { name: 'award-banner', cells });
   element.replaceWith(block);
 }

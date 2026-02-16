@@ -1,6 +1,6 @@
 /* eslint-disable */
 /* global WebImporter */
-/** Parser: columns-testimonials. Base: columns. Source: gigamon.com */
+/** Parser: testimonials. Base: columns. Source: gigamon.com */
 export default function parse(element, { document }) {
   // Columns are nested: div.columns > .component-background > .container >
   //   .adjust-column-width-90 > section.component-columns > div.col-lg-6
@@ -25,6 +25,6 @@ export default function parse(element, { document }) {
   });
 
   const cells = [colFrags.length > 0 ? colFrags : ['', '']];
-  const block = WebImporter.Blocks.createBlock(document, { name: 'columns-testimonials', cells });
+  const block = WebImporter.Blocks.createBlock(document, { name: 'testimonials', cells });
   element.replaceWith(block);
 }

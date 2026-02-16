@@ -1,30 +1,30 @@
 {
   "definitions": [
     {
-      "title": "Embed Blog Feed",
-      "id": "embed-blog-feed",
+      "title": "Award Banner",
+      "id": "award-banner",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
-              "name": "Embed Blog Feed",
-              "filter": "embed-blog-feed"
+              "name": "Award Banner",
+              "filter": "award-banner"
             }
           }
         }
       }
     },
     {
-      "title": "Blog Entry",
-      "id": "blog-entry",
+      "title": "Award Banner Item",
+      "id": "award-banner-item",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
-              "name": "Blog Entry",
-              "model": "blog-entry"
+              "name": "Award",
+              "model": "award-banner-item"
             }
           }
         }
@@ -33,23 +33,37 @@
   ],
   "models": [
     {
-      "id": "blog-entry",
+      "id": "award-banner-item",
       "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "logo",
+          "label": "Logo",
+          "multi": false
+        },
         {
           "component": "richtext",
           "name": "text",
           "value": "",
           "label": "Content",
           "valueType": "string"
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Award Image",
+          "multi": false
         }
       ]
     }
   ],
   "filters": [
     {
-      "id": "embed-blog-feed",
+      "id": "award-banner",
       "components": [
-        "blog-entry"
+        "award-banner-item"
       ]
     }
   ]

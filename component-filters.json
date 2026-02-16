@@ -17,9 +17,9 @@
       "logo-marquee",
       "columns",
       "lottie-animation",
-      "columns-award",
+      "award-banner",
       "cards-featured",
-      "columns-testimonials",
+      "testimonials",
       "columns-value-prop",
       "embed",
       "embed-blog-feed",
@@ -43,6 +43,12 @@
     "id": "accordion",
     "components": [
       "accordion-item"
+    ]
+  },
+  {
+    "id": "award-banner",
+    "components": [
+      "award-banner-item"
     ]
   },
   {
@@ -76,37 +82,7 @@
     ]
   },
   {
-    "id": "columns-award",
-    "components": [
-      "column"
-    ]
-  },
-  {
-    "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
-  },
-  {
     "id": "columns-case-study",
-    "components": [
-      "column"
-    ]
-  },
-  {
-    "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
-  },
-  {
-    "id": "columns-testimonials",
     "components": [
       "column"
     ]
@@ -148,6 +124,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "embed-blog-feed",
+    "components": [
+      "blog-entry"
     ]
   },
   {
@@ -196,6 +178,12 @@
     "id": "tabs",
     "components": [
       "tabs-item"
+    ]
+  },
+  {
+    "id": "testimonials",
+    "components": [
+      "testimonials-item"
     ]
   },
   {

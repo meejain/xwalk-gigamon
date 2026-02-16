@@ -157,6 +157,26 @@ async function loadLazy(doc) {
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+
+  // Auto-load share-module (fixed left sidebar)
+  (async () => {
+    const { loadBlock } = await import('./aem.js');
+    const shareBlock = document.createElement('div');
+    shareBlock.dataset.blockName = 'share-module';
+    shareBlock.className = 'block share-module';
+    document.body.appendChild(shareBlock);
+    loadBlock(shareBlock);
+  })();
+
+  // Auto-load chat-widget (Drift chat, bottom-right)
+  (async () => {
+    const { loadBlock } = await import('./aem.js');
+    const chatBlock = document.createElement('div');
+    chatBlock.dataset.blockName = 'chat-widget';
+    chatBlock.className = 'block chat-widget';
+    document.body.appendChild(chatBlock);
+    loadBlock(chatBlock);
+  })();
 }
 
 /**

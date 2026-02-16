@@ -115,6 +115,36 @@
           }
         },
         {
+          "title": "Award Banner",
+          "id": "award-banner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Award Banner",
+                  "filter": "award-banner"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Award Banner Item",
+          "id": "award-banner-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Award",
+                  "model": "award-banner-item"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Cards Featured",
           "id": "cards-featured",
           "plugins": {
@@ -265,38 +295,8 @@
           }
         },
         {
-          "title": "Columns Award",
-          "id": "columns-award",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/columns/v1/columns",
-                "template": {
-                  "columns": "2",
-                  "rows": "1"
-                }
-              }
-            }
-          }
-        },
-        {
           "title": "Columns Case Study",
           "id": "columns-case-study",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/columns/v1/columns",
-                "template": {
-                  "columns": "2",
-                  "rows": "1"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Columns Testimonials",
-          "id": "columns-testimonials",
           "plugins": {
             "xwalk": {
               "page": {
@@ -348,7 +348,22 @@
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
                   "name": "Embed Blog Feed",
-                  "model": "embed-blog-feed"
+                  "filter": "embed-blog-feed"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Blog Entry",
+          "id": "blog-entry",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Blog Entry",
+                  "model": "blog-entry"
                 }
               }
             }
@@ -695,6 +710,36 @@
                   "model": "tabs-item",
                   "title": "Tab Name",
                   "content_headingType": "h3"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Testimonials",
+          "id": "testimonials",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Testimonials",
+                  "filter": "testimonials"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Testimonial",
+          "id": "testimonials-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Testimonial",
+                  "model": "testimonials-item"
                 }
               }
             }

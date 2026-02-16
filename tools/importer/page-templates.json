@@ -38,13 +38,13 @@
           ]
         },
         {
-          "name": "columns-testimonials",
+          "name": "testimonials",
           "instances": [
             "div.columns > div.component-background.light-grey-bg:not(.vert-pad-top-lg) section.component-columns"
           ]
         },
         {
-          "name": "columns-award",
+          "name": "award-banner",
           "instances": [
             "div.background-image > section.component-background-image"
           ]
@@ -53,12 +53,6 @@
           "name": "cards-resources",
           "instances": [
             "div.carousel > div.component-background section.component-carousel.grayarrows"
-          ]
-        },
-        {
-          "name": "hero-cta",
-          "instances": [
-            "section#ieedf375ef1e580bc427318e1a52ff9d0.component-mega-banner"
           ]
         },
         {
@@ -120,7 +114,7 @@
           "selector": "div.columns:has(.component-columns.not-flush):not(:has(.anu-blade))",
           "style": "grey",
           "blocks": [
-            "columns-testimonials"
+            "testimonials"
           ],
           "defaultContent": []
         },
@@ -130,7 +124,7 @@
           "selector": "div.experiencefragment:has(.background-image)",
           "style": "dark",
           "blocks": [
-            "columns-award"
+            "award-banner"
           ],
           "defaultContent": []
         },
@@ -153,11 +147,13 @@
           "id": "section-8",
           "name": "Explore Real-World Use Cases",
           "selector": "div.mega-banner:has(#ieedf375ef1e580bc427318e1a52ff9d0)",
-          "style": null,
-          "blocks": [
-            "hero-cta"
-          ],
-          "defaultContent": []
+          "style": "dark",
+          "blocks": [],
+          "defaultContent": [
+            "section.component-mega-banner .component-text h2",
+            "section.component-mega-banner .component-text p",
+            "section.component-mega-banner .mega-cta a.btn"
+          ]
         },
         {
           "id": "section-9",
