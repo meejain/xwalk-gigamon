@@ -7,10 +7,9 @@ import carouselLogosParser from './parsers/carousel-logos.js';
 import columnsValuePropParser from './parsers/columns-value-prop.js';
 import tabsFeaturesParser from './parsers/tabs-features.js';
 import columnsCaseStudyParser from './parsers/columns-case-study.js';
-import columnsTestimonialsParser from './parsers/columns-testimonials.js';
-import columnsAwardParser from './parsers/columns-award.js';
+import testimonialsParser from './parsers/testimonials.js';
+import awardBannerParser from './parsers/award-banner.js';
 import cardsResourcesParser from './parsers/cards-resources.js';
-import heroCtaParser from './parsers/hero-cta.js';
 import embedBlogFeedParser from './parsers/embed-blog-feed.js';
 
 // TRANSFORMER IMPORTS
@@ -24,10 +23,9 @@ const parsers = {
   'columns-value-prop': columnsValuePropParser,
   'tabs-features': tabsFeaturesParser,
   'columns-case-study': columnsCaseStudyParser,
-  'columns-testimonials': columnsTestimonialsParser,
-  'columns-award': columnsAwardParser,
+  'testimonials': testimonialsParser,
+  'award-banner': awardBannerParser,
   'cards-resources': cardsResourcesParser,
-  'hero-cta': heroCtaParser,
   'embed-blog-feed': embedBlogFeedParser,
 };
 
@@ -60,20 +58,16 @@ const PAGE_TEMPLATE = {
       instances: ['div.columns > div.component-background.light-grey-bg div.container.anu-blade section.component-columns'],
     },
     {
-      name: 'columns-testimonials',
+      name: 'testimonials',
       instances: ['div.columns > div.component-background.light-grey-bg:not(.vert-pad-top-lg) section.component-columns'],
     },
     {
-      name: 'columns-award',
+      name: 'award-banner',
       instances: ['div.background-image > section.component-background-image'],
     },
     {
       name: 'cards-resources',
       instances: ['div.carousel > div.component-background section.component-carousel.grayarrows'],
-    },
-    {
-      name: 'hero-cta',
-      instances: ['section#ieedf375ef1e580bc427318e1a52ff9d0.component-mega-banner'],
     },
     {
       name: 'embed-blog-feed',
@@ -126,7 +120,7 @@ const PAGE_TEMPLATE = {
       name: 'Customer Testimonials',
       selector: 'div.columns:has(.component-columns.not-flush):not(:has(.anu-blade))',
       style: 'grey',
-      blocks: ['columns-testimonials'],
+      blocks: ['testimonials'],
       defaultContent: [],
     },
     {
@@ -134,7 +128,7 @@ const PAGE_TEMPLATE = {
       name: 'Frost & Sullivan Award',
       selector: 'div.experiencefragment:has(.background-image)',
       style: 'dark',
-      blocks: ['columns-award'],
+      blocks: ['award-banner'],
       defaultContent: [],
     },
     {
@@ -152,9 +146,13 @@ const PAGE_TEMPLATE = {
       id: 'section-9',
       name: 'Explore Real-World Use Cases',
       selector: 'div.mega-banner:has(#ieedf375ef1e580bc427318e1a52ff9d0)',
-      style: null,
-      blocks: ['hero-cta'],
-      defaultContent: [],
+      style: 'dark',
+      blocks: [],
+      defaultContent: [
+        'section.component-mega-banner .component-text h2',
+        'section.component-mega-banner .component-text p',
+        'section.component-mega-banner .mega-cta a.btn',
+      ],
     },
     {
       id: 'section-10',

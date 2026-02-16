@@ -1,6 +1,6 @@
 {
-  "variantName": "columns-testimonials",
-  "baseBlock": "columns",
+  "variantName": "award-banner",
+  "baseBlock": "award-banner",
   "version": "1.0.0",
   "created": "2026-02-15T20:06:56.574Z",
   "sourceContext": {
@@ -9,24 +9,24 @@
     "blockPosition": "middle"
   },
   "visualCharacteristics": {
-    "colorScheme": "grey",
+    "colorScheme": "dark",
     "density": "spacious",
-    "purpose": "testimonials",
-    "imagePattern": "icon"
+    "purpose": "award-spotlight",
+    "imagePattern": "large"
   },
   "contentPattern": {
-    "structure": "logo + quote + CTA | logo + quote + CTA",
-    "buttonCount": 2,
-    "imageCount": 2
+    "structure": "logo + heading + paragraph + CTA | badge",
+    "buttonCount": 1,
+    "imageCount": 3
   },
   "reuseGuidance": {
     "suitableFor": [
-      "side-by-side testimonials",
-      "dual quote sections"
+      "award spotlights",
+      "recognition sections"
     ],
     "notSuitableFor": [
-      "single testimonials",
-      "product sections"
+      "product comparisons",
+      "simple text sections"
     ]
   },
   "usage": {

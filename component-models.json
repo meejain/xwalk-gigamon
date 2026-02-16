@@ -173,6 +173,32 @@
     ]
   },
   {
+    "id": "award-banner-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo",
+        "label": "Logo",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Content",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Award Image",
+        "multi": false
+      }
+    ]
+  },
+  {
     "id": "cards-featured-item",
     "fields": [
       {
@@ -289,45 +315,7 @@
     ]
   },
   {
-    "id": "columns-award",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
-      }
-    ]
-  },
-  {
     "id": "columns-case-study",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
-      }
-    ]
-  },
-  {
-    "id": "columns-testimonials",
     "fields": [
       {
         "component": "text",
@@ -384,13 +372,14 @@
     ]
   },
   {
-    "id": "embed-blog-feed",
+    "id": "blog-entry",
     "fields": [
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "embed_uri",
-        "label": "URI"
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Content",
+        "valueType": "string"
       }
     ]
   },
@@ -848,6 +837,25 @@
       {
         "component": "richtext",
         "name": "content_richtext",
+        "value": "",
+        "label": "Content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "testimonials-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo",
+        "label": "Company Logo",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
         "value": "",
         "label": "Content",
         "valueType": "string"

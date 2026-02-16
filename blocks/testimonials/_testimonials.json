@@ -1,30 +1,30 @@
 {
   "definitions": [
     {
-      "title": "Embed Blog Feed",
-      "id": "embed-blog-feed",
+      "title": "Testimonials",
+      "id": "testimonials",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
-              "name": "Embed Blog Feed",
-              "filter": "embed-blog-feed"
+              "name": "Testimonials",
+              "filter": "testimonials"
             }
           }
         }
       }
     },
     {
-      "title": "Blog Entry",
-      "id": "blog-entry",
+      "title": "Testimonial",
+      "id": "testimonials-item",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
-              "name": "Blog Entry",
-              "model": "blog-entry"
+              "name": "Testimonial",
+              "model": "testimonials-item"
             }
           }
         }
@@ -33,8 +33,15 @@
   ],
   "models": [
     {
-      "id": "blog-entry",
+      "id": "testimonials-item",
       "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "logo",
+          "label": "Company Logo",
+          "multi": false
+        },
         {
           "component": "richtext",
           "name": "text",
@@ -47,9 +54,9 @@
   ],
   "filters": [
     {
-      "id": "embed-blog-feed",
+      "id": "testimonials",
       "components": [
-        "blog-entry"
+        "testimonials-item"
       ]
     }
   ]

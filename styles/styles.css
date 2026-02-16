@@ -413,7 +413,7 @@ main .section.cards-blog-container {
 
 /* Explore Use Cases section */
 main .section.dark:has(a[href*="tech-hub"]) {
-  background-image: url('https://www.gigamon.com/content/dam/website-assets/spotlight/spotlight-techhub.jpg.imgo.jpg');
+  background-image: url('/content/images/spotlight-techhub.jpg');
   background-size: cover;
   background-position: center;
   text-align: left;
