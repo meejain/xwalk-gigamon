@@ -243,14 +243,25 @@ export default async function decorate(block) {
     if (section) section.classList.add(`nav-${c}`);
   });
 
-  // Clean brand link styling
+  // Clean brand link styling and combine logo image with link
   const navBrand = nav.querySelector('.nav-brand');
   if (navBrand) {
-    const brandLink = navBrand.querySelector('.button');
+    const brandLink = navBrand.querySelector('.button') || navBrand.querySelector('a');
     if (brandLink) {
       brandLink.className = '';
       const bc = brandLink.closest('.button-container');
       if (bc) bc.className = '';
+    }
+
+    // xwalk pattern: logo image and link are separate components - combine them
+    const brandPic = navBrand.querySelector('picture');
+    if (brandPic && brandLink && !brandLink.contains(brandPic)) {
+      const imgParent = brandPic.parentElement;
+      brandLink.textContent = '';
+      brandLink.append(brandPic);
+      if (imgParent && imgParent.tagName === 'P' && !imgParent.hasChildNodes()) {
+        imgParent.remove();
+      }
     }
   }
 
