@@ -373,7 +373,6 @@ main .section.carousel-news-container > .carousel-news-wrapper {
 /* Section with tabs + featured case study */
 main .section.tabs-spotlight-container {
   margin: 0;
-  background-color: #f7f9ff;
 }
 
 main .section.tabs-spotlight-container > .tabs-spotlight-wrapper {
@@ -386,9 +385,8 @@ main .section.tabs-spotlight-container > .cards-featured-wrapper {
   padding-bottom: 20px;
 }
 
-/* Quotes section - light blue-grey background */
+/* Quotes section */
 main .section.columns-quotes-container {
-  background-color: #f7f9ff;
   margin: 0;
   padding: 40px 0;
 }
