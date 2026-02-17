@@ -59,8 +59,16 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
  * - 'category': starts with a bold heading and has a nested link list
  * - 'leadin': text paragraphs with optional CTA link
  */
-function detectItemType(li) {
+function detectItemType(li, cardImageMap) {
   if (li.querySelector('picture, img')) return 'card';
+  // xwalk pattern: card items without inline images, matched via external image map
+  if (cardImageMap && cardImageMap.size > 0) {
+    const firstP = li.querySelector(':scope > p');
+    if (firstP) {
+      const link = firstP.querySelector('a');
+      if (link && cardImageMap.has(link.textContent.trim())) return 'card';
+    }
+  }
   const firstP = li.querySelector(':scope > p');
   if (firstP && firstP.querySelector('strong') && li.querySelector(':scope > ul')) return 'category';
   return 'leadin';
@@ -69,7 +77,7 @@ function detectItemType(li) {
 /**
  * Build a mega menu panel from the nav item's child list
  */
-function buildMegaMenu(navItem) {
+function buildMegaMenu(navItem, cardImageMap) {
   const subList = navItem.querySelector(':scope > ul');
   if (!subList) return null;
 
@@ -83,7 +91,7 @@ function buildMegaMenu(navItem) {
   let hasCards = false;
 
   children.forEach((li) => {
-    const type = detectItemType(li);
+    const type = detectItemType(li, cardImageMap);
 
     if (type === 'leadin') {
       const leadin = document.createElement('div');
@@ -150,18 +158,33 @@ function buildMegaMenu(navItem) {
       const card = document.createElement('div');
       card.className = 'mega-card';
 
-      const imgLink = li.querySelector('a');
       const paragraphs = [...li.querySelectorAll(':scope > p')];
-      // First p has image link, subsequent are title and description
-      const titleP = paragraphs.length > 1 ? paragraphs[1] : null;
-      const descP = paragraphs.length > 2 ? paragraphs[2] : null;
+      let imgEl = li.querySelector('img');
+      const hasInlineImg = !!imgEl;
 
+      // Determine title and description paragraphs
+      let titleP;
+      let descP;
+      if (hasInlineImg) {
+        // Inline image pattern: [img, title, desc]
+        titleP = paragraphs.length > 1 ? paragraphs[1] : null;
+        descP = paragraphs.length > 2 ? paragraphs[2] : null;
+      } else {
+        // xwalk pattern: [title, desc] - image from cardImageMap
+        titleP = paragraphs.length > 0 ? paragraphs[0] : null;
+        descP = paragraphs.length > 1 ? paragraphs[1] : null;
+        if (cardImageMap && titleP) {
+          const link = titleP.querySelector('a');
+          if (link) imgEl = cardImageMap.get(link.textContent.trim());
+        }
+      }
+
+      const imgLink = li.querySelector('a');
       if (imgLink) {
         const cardLink = document.createElement('a');
         cardLink.href = imgLink.href;
         cardLink.className = 'mega-card-link';
 
-        const imgEl = li.querySelector('img');
         if (imgEl) {
           const img = document.createElement('img');
           img.src = imgEl.src;
@@ -241,6 +264,22 @@ export default async function decorate(block) {
       if (bc) bc.className = '';
     });
 
+    // Collect standalone images for xwalk card matching (Image components outside the list)
+    const cardImageMap = new Map();
+    const sectionWrapper = navSections.querySelector('.default-content-wrapper') || navSections;
+    sectionWrapper.querySelectorAll(':scope > p').forEach((p) => {
+      const pic = p.querySelector('picture');
+      let img = null;
+      if (pic) {
+        img = pic.querySelector('img');
+      } else if (!p.querySelector('a')) {
+        img = p.querySelector(':scope > img');
+      }
+      if (img && img.alt) {
+        cardImageMap.set(img.alt.trim(), img);
+      }
+    });
+
     const navList = navSections.querySelector(':scope .default-content-wrapper > ul')
       || navSections.querySelector('ul');
 
@@ -251,7 +290,7 @@ export default async function decorate(block) {
           navItem.classList.add('nav-drop');
 
           // Build the mega menu panel
-          const megaPanel = buildMegaMenu(navItem);
+          const megaPanel = buildMegaMenu(navItem, cardImageMap);
           if (megaPanel) {
             navItem.append(megaPanel);
           }
@@ -303,6 +342,13 @@ export default async function decorate(block) {
         }
       });
     }
+
+    // Clean up standalone card images used for matching (remove from visible DOM)
+    sectionWrapper.querySelectorAll(':scope > p').forEach((p) => {
+      if (p.querySelector('picture') || (p.querySelector('img') && !p.querySelector('a'))) {
+        p.remove();
+      }
+    });
   }
 
   // Process tools section (utility nav + DEMOS + CONTACT SALES)
