@@ -1,3 +1,6 @@
 {
-  "/**": "/content/**"
+  "mappings": [
+    "/content/:/",
+    "/content/metadata:/metadata.json"
+  ]
 }
